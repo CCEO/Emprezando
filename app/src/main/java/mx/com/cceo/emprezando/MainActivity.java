@@ -9,10 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import mx.com.cceo.emprezando.Fragment.FragmentBlank;
-import mx.com.cceo.emprezando.Fragment.FragmentInformation;
+import mx.com.cceo.emprezando.Fragment.BlankFragment;
+import mx.com.cceo.emprezando.Fragment.InformationFragment;
+import mx.com.cceo.emprezando.Fragment.ProgramFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,11 +76,11 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position)
             {
-                case 0: return new FragmentInformation();
-                case 1: return new FragmentBlank();
-                case 2: return new FragmentBlank();
-                case 3: return new FragmentBlank();
-                default: return new FragmentBlank();
+                case 0: return new InformationFragment();
+                case 1: return new ProgramFragment();
+                case 2: return new BlankFragment();
+                case 3: return new BlankFragment();
+                default: return new BlankFragment();
             }
 
         }
