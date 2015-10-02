@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import mx.com.cceo.emprezando.Fragment.FragmentBlank;
+import mx.com.cceo.emprezando.Fragment.FragmentInformation;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position)
             {
-                case 0: return new FragmentBlank();
+                case 0: return new FragmentInformation();
                 case 1: return new FragmentBlank();
                 case 2: return new FragmentBlank();
                 case 3: return new FragmentBlank();
