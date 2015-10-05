@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:padding="16dip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <ImageView
+            android:src="@drawable/title_pasos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dip"
+            android:id="@+id/imageView10" />
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Nombre"
+                    android:id="@+id/textViewName" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_name" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Apellidos"
+                    android:id="@+id/textViewApellidos" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_lastname" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Universidad o Prepa"
+                    android:id="@+id/textViewInstitution" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_institution" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Carrera o Especialidad"
+                    android:id="@+id/textViewSpecialty" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_specialty" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Edad"
+                    android:id="@+id/textViewAge" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/register_editText_age" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Dirección"
+                    android:id="@+id/textViewAddress" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_address" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Teléfono Particular"
+                    android:id="@+id/textViewPrivateTelephone" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/register_editText_privateTelephone" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Celular"
+                    android:id="@+id/textViewCelular" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/register_editText_celular" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Nombre de la Empresa o Proyecto"
+                    android:id="@+id/textViewCompanyName" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_companyName" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Puesto"
+                    android:id="@+id/textViewPosition" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_position" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Correo Electrónico"
+                    android:id="@+id/textViewEMail" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/register_editText_email" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Liga de Facebook o Sitio Web"
+                    android:id="@+id/textViewCompanyLink" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textWebEditText"
+                    android:ems="10"
+                    android:id="@+id/register_editText_link" />
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:paddingTop="8dip"
+            android:layout_width="match_parent"
+            android:layout_height="72dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="¿Por Que Quieres Estar en el Foro?"
+                    android:id="@+id/textViewReasons" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textImeMultiLine"
+                    android:ems="10"
+                    android:id="@+id/register_editText_reasons" />
+            </LinearLayout>
+        </RelativeLayout>
+        <Button
+            android:id="@+id/register_accept"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:text="Acceptar"/>
+    </LinearLayout>
+</ScrollView>

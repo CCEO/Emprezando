@@ -14,6 +14,7 @@ import mx.com.cceo.emprezando.Fragment.BlankFragment;
 import mx.com.cceo.emprezando.Fragment.InformationFragment;
 import mx.com.cceo.emprezando.Fragment.MemoriesFragment;
 import mx.com.cceo.emprezando.Fragment.ProgramFragment;
+import mx.com.cceo.emprezando.Fragment.RegisterFragment;
 import mx.com.cceo.emprezando.Fragment.VenueFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1: return new ProgramFragment();
                 case 2: return new MemoriesFragment();
                 case 3: return new VenueFragment();
-                default: return new BlankFragment();
+                default: return new RegisterFragment();
             }
 
         }
