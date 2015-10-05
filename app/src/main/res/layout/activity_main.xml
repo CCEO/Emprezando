@@ -17,17 +17,127 @@
             android:layout_alignParentTop="true" />
     </RelativeLayout>
 
-    <!-- -->
+    <!-- Side Menu-->
     <RelativeLayout
         android:layout_gravity="start"
         android:id="@+id/left_drawer"
         android:layout_width="240dip"
         android:background="#111"
         android:layout_height="match_parent" >
-        <TextView android:text="HOLA MUNDO! jaja" android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:id="@+id/text2" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_margin="16dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dip"
+                    android:src="@drawable/logo_white"/>
+                <RelativeLayout
+                    android:padding="16dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dip">
+                    <ImageView
+                        android:background="#FFFFFF"
+                        android:id="@+id/drawer_item_1"
+                        android:layout_centerVertical="true"
+                        android:layout_width="36dip"
+                        android:layout_height="36dip" />
+                    <TextView
+                        android:layout_marginStart="16dip"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF"
+                        android:layout_toEndOf="@+id/drawer_item_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Información"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="16dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dip">
+                    <ImageView
+                        android:background="#FFFFFF"
+                        android:id="@+id/drawer_item_2"
+                        android:layout_centerVertical="true"
+                        android:layout_width="36dip"
+                        android:layout_height="36dip" />
+                    <TextView
+                        android:layout_marginStart="16dip"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF"
+                        android:layout_toEndOf="@+id/drawer_item_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Programa"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="16dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dip">
+                    <ImageView
+                        android:background="#FFFFFF"
+                        android:id="@+id/drawer_item_3"
+                        android:layout_centerVertical="true"
+                        android:layout_width="36dip"
+                        android:layout_height="36dip" />
+                    <TextView
+                        android:layout_marginStart="16dip"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF"
+                        android:layout_toEndOf="@+id/drawer_item_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Memorias"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="16dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dip">
+                    <ImageView
+                        android:background="#FFFFFF"
+                        android:id="@+id/drawer_item_4"
+                        android:layout_centerVertical="true"
+                        android:layout_width="36dip"
+                        android:layout_height="36dip" />
+                    <TextView
+                        android:layout_marginStart="16dip"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF"
+                        android:layout_toEndOf="@+id/drawer_item_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sede"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:padding="16dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="72dip">
+                    <ImageView
+                        android:background="#FFFFFF"
+                        android:id="@+id/drawer_item_5"
+                        android:layout_centerVertical="true"
+                        android:layout_width="36dip"
+                        android:layout_height="36dip" />
+                    <TextView
+                        android:layout_marginStart="16dip"
+                        android:layout_centerVertical="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF"
+                        android:layout_toEndOf="@+id/drawer_item_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registro"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
     </RelativeLayout>
 
 
