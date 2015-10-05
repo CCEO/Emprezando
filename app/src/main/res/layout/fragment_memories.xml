@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:padding="16dip"
+            android:background="#6a215a"
+            android:layout_width="match_parent"
+            android:layout_height="48dip">
+
+            <TextView
+                android:id="@+id/memories_banner_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:text="2012"/>
+
+        </RelativeLayout>
+        <ScrollView
+            android:id="@+id/memories_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:paddingTop="16dip"
+                    android:paddingStart="36dip"
+                    android:paddingEnd="36dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dip">
+
+                    <ImageView
+                        android:background="@drawable/memories_2012_1"
+                        android:scaleType="centerCrop"
+                        android:layout_width="102dip"
+                        android:layout_alignParentStart="true"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView1" />
+                    <ImageView
+                        android:background="@drawable/memories_2012_2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="102dip"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView2" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:paddingTop="16dip"
+                    android:paddingStart="36dip"
+                    android:paddingEnd="36dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dip">
+
+                    <ImageView
+                        android:background="@drawable/memories_2012_3"
+                        android:layout_width="102dip"
+                        android:layout_alignParentStart="true"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView3" />
+                    <ImageView
+                        android:background="@drawable/memories_2012_4"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="102dip"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView4" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:paddingTop="16dip"
+                    android:paddingStart="36dip"
+                    android:paddingEnd="36dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dip">
+
+                    <ImageView
+                        android:background="@drawable/memories_2012_5"
+                        android:layout_width="102dip"
+                        android:layout_alignParentStart="true"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView5" />
+                    <ImageView
+                        android:background="@drawable/memories_2012_6"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="102dip"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView6" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:paddingTop="16dip"
+                    android:paddingBottom="16dip"
+                    android:paddingStart="36dip"
+                    android:paddingEnd="36dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dip">
+
+                    <ImageView
+                        android:background="@drawable/memories_2012_7"
+                        android:layout_width="102dip"
+                        android:layout_alignParentStart="true"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView7" />
+                    <ImageView
+                        android:background="@drawable/memories_2012_8"
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="102dip"
+                        android:layout_height="128dip"
+                        android:id="@+id/imageView8" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/memories_banner_2013"
+                    android:padding="16dip"
+                    android:background="#6a215a"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="2013"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="700dip">
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/memories_banner_2014"
+                    android:padding="16dip"
+                    android:background="#6a215a"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:text="2014"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="700dip">
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

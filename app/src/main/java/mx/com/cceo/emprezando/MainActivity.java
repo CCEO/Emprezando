@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import mx.com.cceo.emprezando.Fragment.BlankFragment;
 import mx.com.cceo.emprezando.Fragment.InformationFragment;
+import mx.com.cceo.emprezando.Fragment.MemoriesFragment;
 import mx.com.cceo.emprezando.Fragment.ProgramFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 case 0: return new InformationFragment();
                 case 1: return new ProgramFragment();
-                case 2: return new BlankFragment();
+                case 2: return new MemoriesFragment();
                 case 3: return new BlankFragment();
                 default: return new BlankFragment();
             }
