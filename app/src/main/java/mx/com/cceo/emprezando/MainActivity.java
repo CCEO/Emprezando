@@ -1,5 +1,7 @@
 package mx.com.cceo.emprezando;
 
+import android.app.ActionBar;
+import android.app.FragmentTransaction;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import mx.com.cceo.emprezando.Adapter.MenuStripAdapter;
 import mx.com.cceo.emprezando.Fragment.BlankFragment;
 import mx.com.cceo.emprezando.Fragment.InformationFragment;
 import mx.com.cceo.emprezando.Fragment.MemoriesFragment;
@@ -91,6 +94,24 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public int getCount() {
             return NUM_PAGES;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            switch (position)
+            {
+                case 0:
+                    return "Información";
+                case 1:
+                    return "Programa";
+                case 2:
+                    return "Memorias";
+                case 3:
+                    return "Sede";
+                case 4:
+                    return "Registro";
+            }
+            return "";
         }
     }
 }

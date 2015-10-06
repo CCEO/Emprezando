@@ -17,7 +17,7 @@ import mx.com.cceo.emprezando.R;
 /**
  * Created by Hugo on 10/2/2015.
  */
-public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHolderProgram> {
+public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHolderProgram>{
 
     public ArrayList<ConferenceItem> dataSet;
 
@@ -53,6 +53,7 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
     public int getItemCount() {
         return dataSet.size();
     }
+
 
     public static class ViewHolderProgram extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
