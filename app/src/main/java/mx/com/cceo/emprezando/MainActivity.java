@@ -7,23 +7,26 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 
-import mx.com.cceo.emprezando.Adapter.MenuStripAdapter;
-import mx.com.cceo.emprezando.Fragment.BlankFragment;
 import mx.com.cceo.emprezando.Fragment.InformationFragment;
 import mx.com.cceo.emprezando.Fragment.MemoriesFragment;
 import mx.com.cceo.emprezando.Fragment.ProgramFragment;
 import mx.com.cceo.emprezando.Fragment.RegisterFragment;
 import mx.com.cceo.emprezando.Fragment.VenueFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
+    private DrawerLayout drawerLayout;
 
     private static final int NUM_PAGES = 5;
 
@@ -32,9 +35,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+
+        //looks up ViewPager and sets its adapter
         mPager = (ViewPager) findViewById(R.id.main_pager);
         mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
+
+        initDrawer();
+    }
+
+    /**
+     * Enables drawer items to change the adapter current item
+     */
+    public void initDrawer()
+    {
+        RelativeLayout drawerInformation = (RelativeLayout) findViewById(R.id.drawer_information);
+        drawerInformation.setOnClickListener(this);
+
+        RelativeLayout drawerProgram = (RelativeLayout) findViewById(R.id.drawer_program);
+        drawerProgram.setOnClickListener(this);
+
+        RelativeLayout drawerMemories = (RelativeLayout) findViewById(R.id.drawer_memories);
+        drawerMemories.setOnClickListener(this);
+
+        RelativeLayout drawerVenue = (RelativeLayout) findViewById(R.id.drawer_venue);
+        drawerVenue.setOnClickListener(this);
+
+        RelativeLayout drawerRegister = (RelativeLayout) findViewById(R.id.drawer_register);
+        drawerRegister.setOnClickListener(this);
     }
 
     @Override
@@ -65,6 +94,34 @@ public class MainActivity extends AppCompatActivity {
             super.onBackPressed();
         } else {
             mPager.setCurrentItem(mPager.getCurrentItem() - 1);
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        drawerLayout.closeDrawer(Gravity.LEFT);
+        switch (v.getId())
+        {
+            case R.id.drawer_information:
+
+                mPager.setCurrentItem(0);
+                break;
+            case R.id.drawer_program:
+
+                mPager.setCurrentItem(1);
+                break;
+            case R.id.drawer_memories:
+
+                mPager.setCurrentItem(2);
+                break;
+            case R.id.drawer_venue:
+
+                mPager.setCurrentItem(3);
+                break;
+            case R.id.drawer_register:
+
+                mPager.setCurrentItem(4);
+                break;
         }
     }
 
