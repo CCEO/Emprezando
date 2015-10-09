@@ -197,7 +197,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="phone"
                     android:ems="10"
-                    android:id="@+id/register_editText_celular" />
+                    android:id="@+id/register_editText_mobil" />
             </LinearLayout>
         </RelativeLayout>
         <RelativeLayout

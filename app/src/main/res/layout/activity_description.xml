@@ -4,22 +4,22 @@
     <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/drawer">
+        android:id="@+id/description_drawer">
         <!-- Main content view-->
         <RelativeLayout
-            android:id="@+id/content_frame"
+            android:id="@+id/description_content_frame"
             android:layout_width="match_parent"
             android:clickable="true"
             android:layout_height="match_parent" >
 
             <android.support.v4.view.ViewPager
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/main_pager"
+                android:id="@+id/description_pager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true" >
                 <android.support.v4.view.PagerTabStrip
-                    android:id="@+id/pager_title_strip"
+                    android:id="@+id/description_pager_title_strip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"/>
@@ -30,7 +30,7 @@
         <!-- Side Menu-->
         <RelativeLayout
             android:layout_gravity="start"
-            android:id="@+id/left_drawer"
+            android:id="@+id/description_left_drawer"
             android:layout_width="240dip"
             android:background="#111"
             android:layout_height="match_parent" >

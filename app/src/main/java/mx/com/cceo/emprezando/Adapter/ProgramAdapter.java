@@ -1,16 +1,16 @@
 package mx.com.cceo.emprezando.Adapter;
 
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+import mx.com.cceo.emprezando.Linker.ProgramClickListener;
 import mx.com.cceo.emprezando.Model.ConferenceItem;
 import mx.com.cceo.emprezando.R;
 
@@ -20,10 +20,12 @@ import mx.com.cceo.emprezando.R;
 public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHolderProgram>{
 
     public ArrayList<ConferenceItem> dataSet;
+    private ProgramClickListener clickListener;
 
-    public ProgramAdapter(ArrayList<ConferenceItem> dataSet)
+    public ProgramAdapter(ArrayList<ConferenceItem> dataSet, ProgramClickListener clickListener)
     {
         this.dataSet = dataSet;
+        this.clickListener = clickListener;
     }
 
     @Override
@@ -39,13 +41,20 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
     }
 
     @Override
-    public void onBindViewHolder(ViewHolderProgram holder, int position) {
+    public void onBindViewHolder(ViewHolderProgram holder, final int position) {
 
         holder.textDay.setText(dataSet.get(position).getDay());
         holder.textMonth.setText(dataSet.get(position).getMonth());
         holder.textTitle.setText(dataSet.get(position).getTitle());
         holder.textSpeaker.setText(dataSet.get(position).getSpeaker());
         holder.textTime.setText(dataSet.get(position).getTime());
+
+        holder.cardBody.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickListener.onCardClick(v,position);
+            }
+        });
 
     }
 
@@ -62,7 +71,7 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
         public TextView textTitle;
         public TextView textSpeaker;
         public TextView textTime;
-
+        public CardView cardBody;
 
         public ViewHolderProgram(View v) {
             super(v);
@@ -71,6 +80,7 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
             textTitle = (TextView) v.findViewById(R.id.item_program_title);
             textSpeaker = (TextView) v.findViewById(R.id.item_program_speaker);
             textTime = (TextView) v.findViewById(R.id.item_program_time);
+            cardBody = (CardView) v.findViewById(R.id.item_program_card);
         }
     }
 }
