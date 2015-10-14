@@ -19,7 +19,7 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:layout_marginTop="8dip"
+        android:layout_marginTop="0dip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"

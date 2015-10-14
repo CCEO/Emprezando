@@ -2,6 +2,7 @@ package mx.com.cceo.emprezando;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -42,7 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
         mPager.setAdapter(mPagerAdapter);
 
+        //binds drawer items to pager's pages
         initDrawer();
+
+        //if we come from a Description's menu selection, set the pager to Description's selection
+        Intent mIntent = getIntent();
+        int selectedPosition = mIntent.getIntExtra("selection", 0);
+        mPager.setCurrentItem(selectedPosition);
     }
 
     /**

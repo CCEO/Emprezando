@@ -74,7 +74,7 @@ public class RegisterFragment extends Fragment {
                         startActivity(Intent.createChooser(i, "Send mail..."));
                       //  Toast.makeText(RegisterFragment.this.getActivity(), "OK!", Toast.LENGTH_SHORT).show();
                     } catch (android.content.ActivityNotFoundException ex) {
-                        Toast.makeText(RegisterFragment.this.getActivity(), "There are no email clients installed.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterFragment.this.getActivity(), "No hay clientes de correo instalados", Toast.LENGTH_SHORT).show();
                     }
 
                 }
