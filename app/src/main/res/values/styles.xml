@@ -1,14 +1,22 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimaryDark">#222222</item>
+        <item name="colorPrimary">#222222</item>
     </style>
 
     <style name="Pager">
         <item name="android:textColor">#ffffff</item>
         <item name="indicatorColor">#6f8dc5</item>
+    </style>
+
+    <style name="toolbar_dark" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">#00FF00</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark</item>
     </style>
 
 </resources>

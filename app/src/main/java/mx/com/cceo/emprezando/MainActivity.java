@@ -56,11 +56,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.menu_small);
+
 
         getSupportActionBar().setTitle("    " + "Foro Emprezando 2015");
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.menu_small);
+        //toolbar.setDisplayHomeAsUpEnabled(true);
+        //toolbar.setIcon(R.drawable.menu_small);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
