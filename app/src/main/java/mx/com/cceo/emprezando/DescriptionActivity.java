@@ -38,7 +38,9 @@ public class DescriptionActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_description);
 
-        setTitle("Expositores");
+        setTitle("  Expositores");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.menu_small);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.description_drawer);
 
@@ -123,12 +125,10 @@ public class DescriptionActivity extends AppCompatActivity implements View.OnCli
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        if(drawerLayout.isDrawerOpen(Gravity.LEFT))
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        else
+            drawerLayout.openDrawer(Gravity.LEFT);
 
         return super.onOptionsItemSelected(item);
     }
