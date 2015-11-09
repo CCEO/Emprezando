@@ -53,7 +53,7 @@ public class DescriptionFragment extends Fragment {
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"rhadammanthis@gmail.com"});
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"contacto@coparmex.com"});
                 i.putExtra(Intent.EXTRA_SUBJECT, "Duda de conferencia \"" + descriptionItem.getTitle() +"\"");
                 i.putExtra(Intent.EXTRA_TEXT, "A thousnad words");
                 try {

@@ -61,7 +61,7 @@ public class DescriptionActivity extends AppCompatActivity implements View.OnCli
         DescriptionItem francisco = new DescriptionItem("Francisco García","Pacomer y Coachildren", "Empresario de 12 años con dos empresas. Una especializada en asesorar niños en la creación de empresas y la segunda de servicios de catering.\n\nPrimaria: de 1º. 3º Colegio Ciudad de México. D.F. ( 2009 a 2012 ).\n" +
                 "De 4º. Aa 6º. Centro Educativo Vallarta, Estado de México ( 2012 a 2015 ).\n" +
                 "Secundaria: 1º. Grado, Grupo Escolar Simón Bolivar 2015- Actualmente.", R.drawable.francisco);
-        DescriptionItem sergio = new DescriptionItem("Sergio Ramírez Zúñiga","Academia de Baloncesto Indígena", "Entrenador del equipo de niños triqui, ganador de la copa mundial de mini baloncesto en Argentina.\nFORMACION:\n" +
+        DescriptionItem sergio = new DescriptionItem("Sergio Ramírez Zúñiga","Academia de Baloncesto Indígena", "Entrenador del equipo de niños triqui, ganador de la copa mundial de mini baloncesto en Argentina.\n\nFORMACION:\n" +
                 "\n" +
                 "PRIMARIA\n" +
                 "SECUNDARIA\n" +

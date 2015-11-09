@@ -29,8 +29,8 @@
 
             <ImageView
                 android:src="@drawable/title_pasos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="230dip"
+                android:layout_height="25dip"
                 android:layout_marginBottom="8dip"
                 android:id="@+id/imageView10" />
 
@@ -59,8 +59,8 @@ En el momento que esté listo tu registro, aparecerá una imagen con una leyenda
             <ImageView
                 android:layout_gravity="end"
                 android:layout_marginEnd="16dip"
-                android:layout_width="240dip"
-                android:layout_height="45dip"
+                android:layout_width="170dip"
+                android:layout_height="35dip"
                 android:src="@drawable/title_costo"
                 android:id="@+id/imageView4" />
 
@@ -91,8 +91,8 @@ Si realizas tu pago el día del evento (26 de Noviembre) el costo es de $500 Pes
 
             <ImageView
                 android:src="@drawable/title_incluye"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="230dip"
+                android:layout_height="40dip"
                 android:layout_marginBottom="8dip"
                 android:id="@+id/imageView31" />
 
