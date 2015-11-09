@@ -1,12 +1,14 @@
 package mx.com.cceo.emprezando;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends FragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class SplashActivity extends AppCompatActivity {
                     Intent mainIntent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(mainIntent);
                     finish();
+                    overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
                 }
             }
 

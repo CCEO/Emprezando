@@ -1,10 +1,15 @@
 package mx.com.cceo.emprezando.Adapter;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.media.Image;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -21,11 +26,13 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
 
     public ArrayList<ConferenceItem> dataSet;
     private ProgramClickListener clickListener;
+    private Context context;
 
-    public ProgramAdapter(ArrayList<ConferenceItem> dataSet, ProgramClickListener clickListener)
+    public ProgramAdapter(ArrayList<ConferenceItem> dataSet, ProgramClickListener clickListener, Context context)
     {
         this.dataSet = dataSet;
         this.clickListener = clickListener;
+        this.context = context;
     }
 
     @Override
@@ -35,19 +42,19 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
 
         view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item_program, parent, false);
-        ViewHolderProgram vH = new ViewHolderProgram(view);
+        ViewHolderProgram vH = new ViewHolderProgram(view, context);
 
         return vH;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolderProgram holder, final int position) {
+    public void onBindViewHolder(final ViewHolderProgram holder, final int position) {
 
-        holder.textDay.setText(dataSet.get(position).getDay());
-        holder.textMonth.setText(dataSet.get(position).getMonth());
         holder.textTitle.setText(dataSet.get(position).getTitle());
         holder.textSpeaker.setText(dataSet.get(position).getSpeaker());
         holder.textTime.setText(dataSet.get(position).getTime());
+        holder.ivProfile.setImageResource(dataSet.get(position).getPic());
+
 
         holder.cardBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,21 +73,22 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
 
     public static class ViewHolderProgram extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView textDay;
-        public TextView textMonth;
         public TextView textTitle;
         public TextView textSpeaker;
         public TextView textTime;
+        public ImageView ivProfile;
         public CardView cardBody;
 
-        public ViewHolderProgram(View v) {
+        public ViewHolderProgram(View v, Context context) {
             super(v);
-            textDay = (TextView) v.findViewById(R.id.item_program_day);
-            textMonth = (TextView) v.findViewById(R.id.item_program_month);
+            ivProfile = (ImageView) v.findViewById(R.id.item_program_profile);
             textTitle = (TextView) v.findViewById(R.id.item_program_title);
             textSpeaker = (TextView) v.findViewById(R.id.item_program_speaker);
             textTime = (TextView) v.findViewById(R.id.item_program_time);
             cardBody = (CardView) v.findViewById(R.id.item_program_card);
+
+           // textTitle.setTextSize(10 * context.getResources().getDisplayMetrics().density);
+           // textSpeaker.setTextSize(8 * context.getResources().getDisplayMetrics().density);
         }
     }
 }

@@ -8,33 +8,29 @@
         android:layout_width="match_parent"
         android:layout_height="96dip"
         android:clickable="true"
+        android:foreground="?selectableItemBackground"
         android:id="@+id/item_program_card">
 
-        <TextView
+        <RelativeLayout
+            android:layout_marginLeft="16dip"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="22dip"
-            android:layout_marginTop="24dip"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="21"
-            android:id="@+id/item_program_day"
-            android:layout_alignTop="@+id/item_program_day"
-            android:layout_alignParentStart="true" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dip"
-            android:layout_marginTop="16dip"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="OCT"
-            android:id="@+id/item_program_month"
-            android:layout_gravity="center_vertical"
-            android:layout_alignParentStart="true" />
+            android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/item_program_profile"
+                android:layout_width="61dp"
+                android:layout_centerVertical="true"
+                android:layout_height="70dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="#00000000"/>
+        </RelativeLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dip"
             android:layout_marginStart="90dip"
+            android:textSize="21sp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Mi Gran Conferencia"
             android:id="@+id/item_program_title"
@@ -45,6 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dip"
             android:layout_marginStart="90dip"
+            android:textSize="18sp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Sr. Dr. Prof. Patricio"
             android:id="@+id/item_program_speaker"
@@ -63,5 +60,4 @@
 
 
     </android.support.v7.widget.CardView>
-
 </RelativeLayout>

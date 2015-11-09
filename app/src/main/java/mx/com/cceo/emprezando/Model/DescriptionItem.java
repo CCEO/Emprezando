@@ -8,11 +8,13 @@ public class DescriptionItem {
     private String title;
     private String speaker;
     private String about;
+    private int pic;
 
-    public DescriptionItem(String title, String speaker, String about) {
+    public DescriptionItem(String title, String speaker, String about, int pic) {
         this.title = title;
         this.speaker = speaker;
         this.about = about;
+        this.pic = pic;
     }
 
     public String getTitle() {
@@ -38,4 +40,13 @@ public class DescriptionItem {
     public void setAbout(String about) {
         this.about = about;
     }
+
+    public int getPic() {
+        return pic;
+    }
+
+    public void setPic(int pic) {
+        this.pic = pic;
+    }
+
 }

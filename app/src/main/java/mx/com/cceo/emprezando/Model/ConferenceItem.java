@@ -5,20 +5,13 @@ package mx.com.cceo.emprezando.Model;
  */
 public class ConferenceItem {
 
-    public String getDay() {
-        return day;
+
+    public int getPic() {
+        return pic;
     }
 
-    public void setDay(String day) {
-        this.day = day;
-    }
-
-    public String getMonth() {
-        return month;
-    }
-
-    public void setMonth(String month) {
-        this.month = month;
+    public void setPic(int pic) {
+        this.pic = pic;
     }
 
     public String getTitle() {
@@ -46,17 +39,17 @@ public class ConferenceItem {
     }
 
 
-    public ConferenceItem(String day, String month, String title, String speaker, String time) {
-        this.day = day;
-        this.month = month;
+    public ConferenceItem(String title, String speaker, String time, int prfile) {
+
         this.title = title;
         this.speaker = speaker;
         this.time = time;
+        this.pic = prfile;
     }
 
-    private String day;
-    private String month;
+
     private String title;
     private String speaker;
     private String time;
+    private int pic;
 }

@@ -1,29 +1,32 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <android.support.v4.widget.DrawerLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/drawer">
         <!-- Main content view-->
         <RelativeLayout
+            android:background="#571f4f"
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:clickable="true"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
+
 
             <android.support.v4.view.ViewPager
-                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/main_pager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true" >
-                <android.support.v4.view.PagerTabStrip
+                android:layout_height="match_parent">
+                <mx.com.cceo.emprezando.Util.CustomPagerTabStrip
                     android:id="@+id/pager_title_strip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="top"/>
             </android.support.v4.view.ViewPager>
+
+
 
         </RelativeLayout>
 
@@ -52,18 +55,19 @@
                         android:padding="16dip"
                         android:layout_width="match_parent"
                         android:layout_height="72dip">
-                        <ImageView
-                            android:background="#FFFFFF"
-                            android:id="@+id/drawer_item_1"
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/item_program_profile1"
+                            android:src="@drawable/icon_information"
+                            android:layout_width="36dp"
                             android:layout_centerVertical="true"
-                            android:layout_width="36dip"
-                            android:layout_height="36dip" />
+                            android:layout_height="36dp"/>
                         <TextView
                             android:layout_marginStart="16dip"
                             android:layout_centerVertical="true"
                             android:textAppearance="?android:attr/textAppearanceMedium"
                             android:textColor="#FFFFFF"
-                            android:layout_toEndOf="@+id/drawer_item_1"
+                            android:textSize="16dp"
+                            android:layout_toEndOf="@+id/item_program_profile1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Información"/>
@@ -74,8 +78,8 @@
                         android:padding="16dip"
                         android:layout_width="match_parent"
                         android:layout_height="72dip">
-                        <ImageView
-                            android:background="#FFFFFF"
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:src="@drawable/icon_program"
                             android:id="@+id/drawer_item_2"
                             android:layout_centerVertical="true"
                             android:layout_width="36dip"
@@ -96,8 +100,8 @@
                         android:padding="16dip"
                         android:layout_width="match_parent"
                         android:layout_height="72dip">
-                        <ImageView
-                            android:background="#FFFFFF"
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:src="@drawable/icon_memories"
                             android:id="@+id/drawer_item_3"
                             android:layout_centerVertical="true"
                             android:layout_width="36dip"
@@ -118,8 +122,8 @@
                         android:padding="16dip"
                         android:layout_width="match_parent"
                         android:layout_height="72dip">
-                        <ImageView
-                            android:background="#FFFFFF"
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:src="@drawable/icon_venue"
                             android:id="@+id/drawer_item_4"
                             android:layout_centerVertical="true"
                             android:layout_width="36dip"
@@ -140,8 +144,8 @@
                         android:padding="16dip"
                         android:layout_width="match_parent"
                         android:layout_height="72dip">
-                        <ImageView
-                            android:background="#FFFFFF"
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:src="@drawable/icon_register"
                             android:id="@+id/drawer_item_5"
                             android:layout_centerVertical="true"
                             android:layout_width="36dip"
@@ -162,6 +166,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="84dip">
                         <ImageView
+                            android:id="@+id/main_logo"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerInside"

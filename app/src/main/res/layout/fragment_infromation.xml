@@ -1,91 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+
+    <RelativeLayout
+        android:background="#571f4f"
+        android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:clickable="true"
         android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_marginLeft="16dip"
-        android:layout_width="240dip"
-        android:layout_height="60dip"
-        android:src="@drawable/title_que_es"
-        android:id="@+id/imageView2" />
 
-    <ImageView
-        android:layout_marginTop="-24dip"
-        android:layout_width="310dip"
-        android:layout_marginBottom="0dip"
-        android:layout_height="wrap_content"
-        android:src="@drawable/page_break_rigth"
-        android:id="@+id/imageView3" />
+    </RelativeLayout>
 
-    <TextView
-        android:paddingStart="16dip"
-        android:paddingEnd="16dip"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Es un evento dedicado al emprendimiento donde se hablará de la creación de empresas, de responsabilidad social, de juventud y formación empresarial el cual organiza la Confederación Patronal de la República Mexicana COPARMEX Aguascalientes a través de su Comisión de Empresarios Jóvenes. Al evento asistirán los emprendedores y empresarios que están luchando por hacer realidad su sueño y transformar a su comunidad desde su universidad, preparatoria o empresa. Buscamos Jóvenes con vocación empresarial en los que generaremos una experiencia de vida y estamos seguros que cada individuo presente en este foro sumará esfuerzos para la creación de más y mejores empresas para México."
-        android:id="@+id/textView2" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_gravity="end"
-        android:layout_marginEnd="16dip"
-        android:layout_width="240dip"
-        android:layout_height="60dip"
-        android:src="@drawable/title_objectivo"
-        android:id="@+id/imageView4" />
+            <ImageView
+                android:layout_marginLeft="16dip"
+                android:layout_width="240dip"
+                android:layout_height="60dip"
+                android:src="@drawable/title_que_es"
+                android:id="@+id/imageView2" />
 
-    <ImageView
-        android:layout_marginTop="-8dip"
-        android:layout_width="310dip"
-        android:layout_gravity="end"
-        android:layout_marginBottom="8dip"
-        android:layout_height="wrap_content"
-        android:src="@drawable/page_break_left"
-        android:id="@+id/imageView5" />
+            <ImageView
+                android:layout_marginTop="-24dip"
+                android:layout_width="310dip"
+                android:layout_marginBottom="0dip"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page_break_rigth"
+                android:id="@+id/imageView3" />
 
-    <TextView
-        android:paddingStart="16dip"
-        android:paddingEnd="16dip"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Despertar, acompañar y consolidar las vocaciones empresariales de estos jóvenes, y de esta manera de canalizar su talento en la creación de empresas de valor y desarrollen un sentido de responsabilidad social generando conciencia de que todo empresario se debe a su equipo de colaboradores y por tanto a su comunidad."
-        android:id="@+id/textView3" />
+            <TextView
+                android:paddingStart="16dip"
+                android:paddingEnd="16dip"
+                android:gravity="left"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Es un evento dedicado al emprendimiento donde se hablará de la creación de empresas, de responsabilidad social, de juventud y formación empresarial el cual organiza la Confederación Patronal de la República Mexicana COPARMEX Aguascalientes a través de su Comisión de Empresarios Jóvenes. Al evento asistirán los emprendedores y empresarios que están luchando por hacer realidad su sueño y transformar a su comunidad desde su universidad, preparatoria o empresa. Buscamos Jóvenes con vocación empresarial en los que generaremos una experiencia de vida y estamos seguros que cada individuo presente en este foro sumará esfuerzos para la creación de más y mejores empresas para México."
+                android:id="@+id/textView2" />
 
-        <ImageView
-            android:layout_marginTop="8dip"
-            android:layout_marginLeft="16dip"
-            android:layout_width="240dip"
-            android:layout_height="45dip"
-            android:src="@drawable/title_dirigido"
-            android:id="@+id/imageView6" />
+            <ImageView
+                android:layout_gravity="end"
+                android:layout_marginEnd="16dip"
+                android:layout_width="240dip"
+                android:layout_height="60dip"
+                android:src="@drawable/tittle_objetivo"
+                android:id="@+id/imageView4" />
 
-        <ImageView
-            android:layout_marginTop="-10dip"
-            android:layout_width="310dip"
-            android:layout_height="wrap_content"
-            android:src="@drawable/page_break_rigth"
-            android:id="@+id/imageView7" />
+            <ImageView
+                android:layout_marginTop="-8dip"
+                android:layout_width="310dip"
+                android:layout_gravity="end"
+                android:layout_marginBottom="8dip"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page_break_left"
+                android:id="@+id/imageView5" />
 
-        <TextView
-            android:paddingStart="16dip"
-            android:paddingEnd="16dip"
-            android:gravity="center"
-            android:layout_marginBottom="16dip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="-Empresarios
--Jóvenes con ideas de negocio que quieran llevarlas a la práctica
--Estudiantes.
--Futuros empresarios"
-            android:id="@+id/textView8" />
-    </LinearLayout>
-</ScrollView>
+            <TextView
+                android:paddingStart="16dip"
+                android:paddingEnd="16dip"
+                android:gravity="left"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Despertar, acompañar y consolidar las vocaciones empresariales de estos jóvenes, y de esta manera de canalizar su talento en la creación de empresas de valor y desarrollen un sentido de responsabilidad social generando conciencia de que todo empresario se debe a su equipo de colaboradores y por tanto a su comunidad."
+                android:id="@+id/textView3" />
+
+            <ImageView
+                android:layout_marginTop="8dip"
+                android:layout_marginLeft="16dip"
+                android:layout_width="240dip"
+                android:layout_height="45dip"
+                android:src="@drawable/title_dirigido"
+                android:id="@+id/imageView6" />
+
+            <ImageView
+                android:layout_marginTop="-10dip"
+                android:layout_width="310dip"
+                android:layout_height="wrap_content"
+                android:src="@drawable/page_break_rigth"
+                android:id="@+id/imageView7" />
+
+            <TextView
+                android:paddingStart="16dip"
+                android:paddingEnd="16dip"
+                android:gravity="left"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="16dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="- Empresarios\n
+- Jóvenes con ideas de negocio que quieran llevarlas a la práctica.\n
+- Estudiantes.\n
+- Futuros empresarios\n"
+                android:id="@+id/textView8" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

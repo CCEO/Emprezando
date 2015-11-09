@@ -3,6 +3,12 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="Pager">
+        <item name="android:textColor">#ffffff</item>
+        <item name="indicatorColor">#6f8dc5</item>
     </style>
 
 </resources>

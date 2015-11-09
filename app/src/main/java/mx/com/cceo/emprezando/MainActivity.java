@@ -1,21 +1,36 @@
 package mx.com.cceo.emprezando;
 
 import android.app.ActionBar;
+import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.net.Uri;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.DragEvent;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
+import java.util.List;
 
 import mx.com.cceo.emprezando.Fragment.InformationFragment;
 import mx.com.cceo.emprezando.Fragment.MemoriesFragment;
@@ -28,6 +43,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
     private DrawerLayout drawerLayout;
+    private ImageView ivBackGround;
+    private CrossfadePageTransformer pagerTransformer;
+
+    private int pageWidth;
 
     private static final int NUM_PAGES = 5;
 
@@ -36,15 +55,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().setTitle("    " + "Foro Emprezando 2015");
+
+        getSupportActionBar().setIcon(R.drawable.menu_small);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        //this.getActionBar().setDisplayHomeAsUpEnabled(true);
+        //getActionBar().setIcon(R.drawable.icon_information);
+        //getActionBar().setTitle("");
+
+        ImageView ivLogo = (ImageView) findViewById(R.id.main_logo);
+        ivLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "http://www.cceo.com.mx";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
+        // ivBackGround = (ImageView) findViewById(R.id.main_ivBackground);
+        pagerTransformer = new CrossfadePageTransformer();
 
         //looks up ViewPager and sets its adapter
         mPager = (ViewPager) findViewById(R.id.main_pager);
-        mPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
+        mPagerAdapter = new MainPagerAdapter(fragmentManager);
         mPager.setAdapter(mPagerAdapter);
 
-        //binds drawer items to pager's pages
         initDrawer();
+
 
         //if we come from a Description's menu selection, set the pager to Description's selection
         Intent mIntent = getIntent();
@@ -77,6 +121,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+       // super.onCreateOptionsMenu(menu);
         return true;
     }
 
@@ -146,10 +191,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public Fragment getItem(int position) {
             switch (position)
             {
-                case 0: return new InformationFragment();
-                case 1: return new ProgramFragment();
-                case 2: return new MemoriesFragment();
-                case 3: return new VenueFragment();
+                case 0:
+                    // ivBackGround.setTranslationX(pageWidth/5 * (1));
+                    return new InformationFragment();
+                case 1:
+                    //           ivBackGround.setTranslationX(pageWidth/5 * (1));
+                    return new ProgramFragment();
+                case 2:
+                    //         ivBackGround.setTranslationX(pageWidth/5 * (2));
+                    return new MemoriesFragment();
+                case 3:
+                    //       ivBackGround.setTranslationX(pageWidth/5 * (3));
+                    return new VenueFragment();
                 default: return new RegisterFragment();
             }
 
@@ -176,6 +229,90 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return "Registro";
             }
             return "";
+        }
+    }
+
+    private class CrossfadePageTransformer implements ViewPager.PageTransformer {
+
+        public int size = 0;
+
+        public int getScreenSize()
+        {
+            return size;
+        }
+
+        @Override
+        public void transformPage(View page, float position) {
+            int pageWidth = page.getWidth();
+            size = page.getWidth();
+
+            ViewPager parent = (ViewPager) page.getParent();
+            position -= parent.getPaddingRight() / (float) pageWidth;
+
+            //ImageView ivObj1 = (ImageView) findViewById(R.id.obj1);
+            ImageView ivObj2 = (ImageView) findViewById(R.id.obj2);
+            ImageView ivObj3 = (ImageView) findViewById(R.id.obj3);
+            ImageView ivObj4 = (ImageView) findViewById(R.id.obj4);
+           // ImageView ivObj5 = (ImageView) findViewById(R.id.obj5);
+            //  ImageView ivObj3 = (ImageView) page.findViewById(R.id.obj3);
+
+            setTitle(String.valueOf(position));
+
+            if(0 <= position && position < 1){
+                // page.setTranslationX(pageWidth * -position);
+            }
+            if(-1 < position && position < 0){
+                //page.setTranslationX(pageWidth * -position);
+            }
+
+            //ivBackGround.setTranslationX(ivBackGround.getTranslationX() + (pageWidth/5 * (position)));
+            //((RelativeLayout.LayoutParams) ivBackGround.getLayoutParams()).setMargins(((int) (pageWidth/5 * (position))), 0, 0, 0);
+            if (position < -1) { // [-Infinity,-1)
+                // This page is way off-screen to the left.
+                page.setAlpha(1);
+
+            } else if (position <= 1) { // [-1,1]
+              //  if(ivObj1 != null)
+               //     ivObj1.setTranslationX((pageWidth/5 * (position)));
+                //  ((RelativeLayout.LayoutParams) ivObj1.getLayoutParams()).setMargins(-((int) (pageWidth/5 * (position))), 0, 0, 0);
+                if(ivObj2 != null)
+                    ivObj2.setTranslationX((pageWidth/5 * (position)));
+                // ((RelativeLayout.LayoutParams) ivObj2.getLayoutParams()).setMargins(-((int) (pageWidth * (position))), 0, 0, 0);
+                if(ivObj3 != null)
+                    ivObj3.setTranslationX((pageWidth/5 * (position)));
+
+                if(ivObj4 != null)
+                    ivObj4.setTranslationX((pageWidth/5 * (position)));
+
+            //    if(ivObj5 != null)
+            //        ivObj5.setTranslationX((pageWidth/5 * (position)));
+                //  dummyImageView.setTranslationX(-position * (pageWidth / 2)); //Half the normal speed
+
+            } else { // (1,+Infinity]
+                // This page is way off-screen to the right.
+                page.setAlpha(1);
+            }
+
+//            if(position < -1.0f || position > 1.0f) {
+//                page.setAlpha(0);
+//            } else if( position == 0.0f ) {
+//            } else {
+//                if(ivObj1 != null)
+//                    ivObj1.setTranslationX(-(pageWidth/5 * (position)));
+//                  //  ((RelativeLayout.LayoutParams) ivObj1.getLayoutParams()).setMargins(-((int) (pageWidth/5 * (position))), 0, 0, 0);
+//                if(ivObj2 != null)
+//                ivObj2.setTranslationX((pageWidth/5 * (position)));
+//                   // ((RelativeLayout.LayoutParams) ivObj2.getLayoutParams()).setMargins(-((int) (pageWidth * (position))), 0, 0, 0);
+//                if(ivObj3 != null)
+//                    ivObj3.setTranslationX(-(pageWidth/5 * (position)));
+//
+//                if(ivObj4 != null)
+//                    ivObj4.setTranslationX(-(pageWidth/5 * (position)));
+//
+//                if(ivObj5 != null)
+//                    ivObj5.setTranslationX(-(pageWidth/5 * (position)));
+//
+//            }
         }
     }
 }

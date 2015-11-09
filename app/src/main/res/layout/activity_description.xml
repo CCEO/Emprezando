@@ -7,6 +7,7 @@
         android:id="@+id/description_drawer">
         <!-- Main content view-->
         <RelativeLayout
+            android:background="#571f4f"
             android:id="@+id/description_content_frame"
             android:layout_width="match_parent"
             android:clickable="true"
@@ -18,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentTop="true" >
-                <android.support.v4.view.PagerTabStrip
+                <mx.com.cceo.emprezando.Util.CustomPagerTabStrip
                     android:id="@+id/description_pager_title_strip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

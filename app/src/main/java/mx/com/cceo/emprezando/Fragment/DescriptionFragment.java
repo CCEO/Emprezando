@@ -2,12 +2,14 @@ package mx.com.cceo.emprezando.Fragment;
 
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,10 +38,12 @@ public class DescriptionFragment extends Fragment {
             TextView tvName = (TextView) rootView.findViewById(R.id.description_name);
             TextView tvSpeaker = (TextView) rootView.findViewById(R.id.description_speaker);
             TextView tvAbout = (TextView) rootView.findViewById(R.id.description_about);
+            ImageView ivProfile = (ImageView) rootView.findViewById(R.id.description_profile_image);
 
             tvName.setText(descriptionItem.getTitle());
             tvSpeaker.setText(descriptionItem.getSpeaker());
             tvAbout.setText(descriptionItem.getAbout());
+            ivProfile.setImageResource(descriptionItem.getPic());
         }
 
         //Initiates the e-mail client to send questions to speaker

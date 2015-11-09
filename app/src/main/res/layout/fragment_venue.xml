@@ -3,6 +3,23 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:background="#571f4f"
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginLeft="-580dip"
+            android:layout_centerVertical="true"
+            android:id="@+id/obj4"
+            android:scaleType="matrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background_colors_extra_small"/>
+    </RelativeLayout>
+
     <ImageView
         android:padding="16dip"
         android:src="@drawable/background_sede"
@@ -20,5 +37,6 @@
         android:text="Este año el Teatro Morelos será quien reciba a los emprendedores y empresarios que van a cambiar a México, que mejor sede que la que reunió hace un poco más de 100 años a mexicanos que también cambiaron México."
         android:id="@+id/textView4"
         android:layout_marginBottom="40dp"
+        android:textColor="#ffffff"
         android:layout_gravity="center_horizontal|bottom" />
 </FrameLayout>

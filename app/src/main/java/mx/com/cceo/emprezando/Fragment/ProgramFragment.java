@@ -1,11 +1,14 @@
 package mx.com.cceo.emprezando.Fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -27,6 +30,7 @@ public class ProgramFragment extends Fragment implements ProgramClickListener{
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RelativeLayout fragmentBody;
+    private CardView cardView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -43,12 +47,27 @@ public class ProgramFragment extends Fragment implements ProgramClickListener{
 
         ArrayList<ConferenceItem> dataSet = new ArrayList<>();
 
-        ConferenceItem temp = new ConferenceItem("21","OCT","Nymphetamine","Cradle of Filth", "10:15 - 11:30");
-        ConferenceItem temp1 = new ConferenceItem("12","DIC","Blood and Thunder","Mastodon", "10:15 - 11:30");
-        dataSet.add(temp);
-        dataSet.add(temp1);
+        ConferenceItem saul = new ConferenceItem("Saúl Haro Vazquez","Macrolynk", "10:00 - 10:20", R.drawable.saulh);
+        ConferenceItem jorge = new ConferenceItem("Jorge García","Outcom", "10:20 - 10:50", R.drawable.jorge);
+        ConferenceItem juan = new ConferenceItem("Juan José Díaz","Eudoxa", "10:50 - 11:20", R.drawable.juan);
+        ConferenceItem francisco = new ConferenceItem("Francisco García","Pacomer y Coachildren", "11:20 - 11:50", R.drawable.francisco);
+        ConferenceItem sergio = new ConferenceItem("Sergio Ramírez Zúñiga","Academia de Baloncesto", "12:20 - 12:40", R.drawable.sergio);
+        ConferenceItem guadalupe = new ConferenceItem("Guadalupe Gómez","Remedios Mágicos", "12:40 - 13:10", R.drawable.guadalupe);
+        ConferenceItem arturo = new ConferenceItem("Arturo Gilio Hamdan","Palacio de Centenario", "13:10 - 13:30", R.drawable.arturo);
+        ConferenceItem vidal = new ConferenceItem("Vidal Cantú","Kenio Films y Veramiko", "13:30 - 14:10", R.drawable.vidal);
+        ConferenceItem norma = new ConferenceItem("Norma Romero","Las Patronas", "16:40 - 17:10", R.drawable.norma);
 
-        mAdapter = new ProgramAdapter(dataSet, this);
+        dataSet.add(saul);
+        dataSet.add(jorge);
+        dataSet.add(juan);
+        dataSet.add(francisco);
+        dataSet.add(sergio);
+        dataSet.add(guadalupe);
+        dataSet.add(arturo);
+        dataSet.add(vidal);
+        dataSet.add(norma);
+
+        mAdapter = new ProgramAdapter(dataSet, this,getActivity());
         mRecyclerView.setAdapter(mAdapter);
 
         return rootView;
@@ -56,14 +75,11 @@ public class ProgramFragment extends Fragment implements ProgramClickListener{
 
     @Override
     public void onCardClick(View v, int position) {
-        Toast.makeText(ProgramFragment.this.getActivity(), String.valueOf(position), Toast.LENGTH_SHORT).show();
 
         Intent mainIntent = new Intent(ProgramFragment.this.getActivity(), DescriptionActivity.class);
         mainIntent.putExtra("position", position);
         startActivity(mainIntent);
-//        getFragmentManager().beginTransaction()
-//                .replace(fragmentBody.getId(), new DescriptionFragment())
-//                .addToBackStack(null)
-//                .commit();
+        getActivity().overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+
     }
 }
