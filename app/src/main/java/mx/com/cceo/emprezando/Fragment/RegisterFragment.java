@@ -27,18 +27,18 @@ public class RegisterFragment extends Fragment {
         ViewGroup rootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_register, container, false);
 
-        buttonAccept = (Button) rootView.findViewById(R.id.register_accept);
-
-
-        buttonAccept.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "http://emprezando.com/2015/registrarme/";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
-            }
-        });
+//        buttonAccept = (Button) rootView.findViewById(R.id.register_accept);
+//
+//
+//        buttonAccept.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                String url = "http://emprezando.com/2015/registrarme/";
+//                Intent i = new Intent(Intent.ACTION_VIEW);
+//                i.setData(Uri.parse(url));
+//                startActivity(i);
+//            }
+//        });
 
         return rootView;
     }

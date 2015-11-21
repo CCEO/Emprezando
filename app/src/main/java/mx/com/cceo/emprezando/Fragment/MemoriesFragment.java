@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -104,6 +105,15 @@ public class MemoriesFragment extends Fragment {
 
         // create a new ImageView for each item referenced by the Adapter
         public View getView(int position, View convertView, ViewGroup parent) {
+//            CardView card = new CardView(mContext);
+//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+//                    LinearLayout.LayoutParams.MATCH_PARENT,
+//                    LinearLayout.LayoutParams.WRAP_CONTENT
+//            );
+//            int margin = dpToPixels(8);
+//            params.setMargins(margin, margin, margin, margin);
+//            card.setLayoutParams(params);
+
             ImageView imageView;
             if (convertView == null) {
                 // if it's not recycled, initialize some attributes
@@ -116,6 +126,7 @@ public class MemoriesFragment extends Fragment {
             }
 
             imageView.setImageResource(mThumbIds[position]);
+//            card.addView(imageView);
             return imageView;
         }
 

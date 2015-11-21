@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:background="#571f4f"
+        android:background="#DEDDE3"
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
         android:clickable="true"
@@ -13,97 +13,183 @@
 
     </RelativeLayout>
 
-    <ScrollView
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <LinearLayout
+            android:padding="8dip"
             android:layout_width="match_parent"
             android:orientation="vertical"
             android:layout_height="match_parent">
-
-            <ImageView
-                android:layout_marginLeft="16dip"
-                android:layout_width="240dip"
-                android:layout_height="60dip"
-                android:src="@drawable/title_que_es"
-                android:id="@+id/imageView2" />
-
-            <ImageView
-                android:layout_marginTop="-24dip"
-                android:layout_width="310dip"
-                android:layout_marginBottom="0dip"
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/page_break_rigth"
-                android:id="@+id/imageView3" />
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/item_program_card">
+                <RelativeLayout
+                    android:paddingBottom="8dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView
-                android:paddingStart="16dip"
-                android:paddingEnd="16dip"
-                android:gravity="left"
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
+                    <ImageView
+                        android:alpha="0.8"
+                        android:layout_marginTop="9dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:src="@drawable/help_icon"
+                        android:id="@+id/imageView2" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_marginStart="8dip"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_above="@+id/imageView3"
+                        android:textColor="#000000"
+                        android:text="¿Que es el Foro Emprezando?"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_below="@+id/imageView2"
+                        android:layout_marginTop="-10dip"
+                        android:layout_width="310dip"
+                        android:layout_marginBottom="0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/page_break_rigth"
+                        android:id="@+id/imageView3" />
+
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_below="@id/imageView3"
+                        android:paddingStart="16dip"
+                        android:paddingEnd="16dip"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:textSize="15sp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Es un evento dedicado al emprendimiento donde se hablará de la creación de empresas, de responsabilidad social, de juventud y formación empresarial el cual organiza la Confederación Patronal de la República Mexicana COPARMEX Aguascalientes a través de su Comisión de Empresarios Jóvenes. \n\nAl evento asistirán los emprendedores y empresarios que están luchando por hacer realidad su sueño y transformar a su comunidad desde su universidad, preparatoria o empresa. \n\nBuscamos Jóvenes con vocación empresarial en los que generaremos una experiencia de vida y estamos seguros que cada individuo presente en este foro sumará esfuerzos para la creación de más y mejores empresas para México."
+                        android:id="@+id/textView2" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="16dip"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Es un evento dedicado al emprendimiento donde se hablará de la creación de empresas, de responsabilidad social, de juventud y formación empresarial el cual organiza la Confederación Patronal de la República Mexicana COPARMEX Aguascalientes a través de su Comisión de Empresarios Jóvenes. Al evento asistirán los emprendedores y empresarios que están luchando por hacer realidad su sueño y transformar a su comunidad desde su universidad, preparatoria o empresa. Buscamos Jóvenes con vocación empresarial en los que generaremos una experiencia de vida y estamos seguros que cada individuo presente en este foro sumará esfuerzos para la creación de más y mejores empresas para México."
-                android:id="@+id/textView2" />
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/item_program_card2">
+                <RelativeLayout
+                    android:paddingBottom="8dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <ImageView
-                android:layout_gravity="end"
-                android:layout_marginEnd="16dip"
-                android:layout_width="240dip"
-                android:layout_height="60dip"
-                android:src="@drawable/tittle_objetivo"
-                android:id="@+id/imageView4" />
+                    <ImageView
+                        android:alpha="0.8"
+                        android:layout_marginTop="9dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:src="@drawable/flag_icon"
+                        android:id="@+id/imageView101" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_marginStart="8dip"
+                        android:layout_toRightOf="@+id/imageView101"
+                        android:layout_above="@+id/imageView102"
+                        android:textColor="#000000"
+                        android:text="Objetivos del Foro"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
-            <ImageView
-                android:layout_marginTop="-8dip"
-                android:layout_width="310dip"
-                android:layout_gravity="end"
-                android:layout_marginBottom="8dip"
+                    <ImageView
+                        android:layout_below="@+id/imageView101"
+                        android:layout_marginTop="-10dip"
+                        android:layout_width="310dip"
+                        android:layout_marginBottom="0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/page_break_rigth"
+                        android:id="@+id/imageView102" />
+
+                    <TextView
+                        android:alpha="0.8"
+                        android:textSize="15sp"
+                        android:layout_below="@id/imageView102"
+                        android:paddingStart="16dip"
+                        android:paddingEnd="16dip"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Despertar, acompañar y consolidar las vocaciones empresariales de estos jóvenes, y de esta manera de canalizar su talento en la creación de empresas de valor y desarrollen un sentido de responsabilidad social generando conciencia de que todo empresario se debe a su equipo de colaboradores y por tanto a su comunidad."
+                        android:id="@+id/textView103" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="16dip"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/page_break_left"
-                android:id="@+id/imageView5" />
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/item_program_card3">
+                <RelativeLayout
+                    android:paddingBottom="8dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <TextView
-                android:paddingStart="16dip"
-                android:paddingEnd="16dip"
-                android:gravity="left"
-                android:textColor="#ffffff"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Despertar, acompañar y consolidar las vocaciones empresariales de estos jóvenes, y de esta manera de canalizar su talento en la creación de empresas de valor y desarrollen un sentido de responsabilidad social generando conciencia de que todo empresario se debe a su equipo de colaboradores y por tanto a su comunidad."
-                android:id="@+id/textView3" />
+                    <ImageView
+                        android:alpha="0.8"
+                        android:layout_marginTop="9dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:src="@drawable/crosshair_icon"
+                        android:id="@+id/imageView103" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_marginStart="8dip"
+                        android:layout_toRightOf="@+id/imageView103"
+                        android:layout_above="@+id/imageView104"
+                        android:textColor="#000000"
+                        android:text="¿Dirigido A?"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
-            <ImageView
-                android:layout_marginTop="8dip"
-                android:layout_marginLeft="16dip"
-                android:layout_width="240dip"
-                android:layout_height="45dip"
-                android:src="@drawable/title_dirigido"
-                android:id="@+id/imageView6" />
+                    <ImageView
+                        android:layout_below="@+id/imageView103"
+                        android:layout_marginTop="-10dip"
+                        android:layout_width="310dip"
+                        android:layout_marginBottom="0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/page_break_rigth"
+                        android:id="@+id/imageView104" />
 
-            <ImageView
-                android:layout_marginTop="-10dip"
-                android:layout_width="310dip"
-                android:layout_height="wrap_content"
-                android:src="@drawable/page_break_rigth"
-                android:id="@+id/imageView7" />
-
-            <TextView
-                android:paddingStart="16dip"
-                android:paddingEnd="16dip"
-                android:gravity="left"
-                android:textColor="#ffffff"
-                android:layout_marginBottom="16dip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- Empresarios\n
-- Jóvenes con ideas de negocio que quieran llevarlas a la práctica.\n
-- Estudiantes.\n
-- Futuros empresarios\n"
-                android:id="@+id/textView8" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_below="@id/imageView104"
+                        android:paddingStart="16dip"
+                        android:paddingEnd="16dip"
+                        android:textSize="15sp"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" - Empresarios\n\n
+- Jóvenes con ideas de negocio que quieran llevarlas a la práctica.\n\n
+- Estudiantes.\n\n
+- Futuros empresarios"
+                        android:id="@+id/textView105" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
-    </ScrollView>
+    </android.support.v4.widget.NestedScrollView >
 </RelativeLayout>

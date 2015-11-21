@@ -36,34 +36,34 @@ public class DescriptionFragment extends Fragment {
         if(descriptionItem != null)
         {
             TextView tvName = (TextView) rootView.findViewById(R.id.description_name);
-            TextView tvSpeaker = (TextView) rootView.findViewById(R.id.description_speaker);
-            TextView tvAbout = (TextView) rootView.findViewById(R.id.description_about);
+            TextView tvCompany = (TextView) rootView.findViewById(R.id.description_company);
+            TextView tvAbout = (TextView) rootView.findViewById(R.id.description_bio);
             ImageView ivProfile = (ImageView) rootView.findViewById(R.id.description_profile_image);
 
             tvName.setText(descriptionItem.getTitle());
-            tvSpeaker.setText(descriptionItem.getSpeaker());
+            tvCompany.setText(descriptionItem.getSpeaker());
             tvAbout.setText(descriptionItem.getAbout());
             ivProfile.setImageResource(descriptionItem.getPic());
         }
 
         //Initiates the e-mail client to send questions to speaker
-        Button button = (Button) rootView.findViewById(R.id.description_send);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"contacto@coparmex.com"});
-                i.putExtra(Intent.EXTRA_SUBJECT, "Duda de conferencia \"" + descriptionItem.getTitle() +"\"");
-                i.putExtra(Intent.EXTRA_TEXT, "A thousnad words");
-                try {
-                    startActivity(Intent.createChooser(i, "Send mail..."));
-                    //  Toast.makeText(RegisterFragment.this.getActivity(), "OK!", Toast.LENGTH_SHORT).show();
-                } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(DescriptionFragment.this.getActivity(), "No hay clientes de correo instalados", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+//        Button button = (Button) rootView.findViewById(R.id.description_send);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(Intent.ACTION_SEND);
+//                i.setType("message/rfc822");
+//                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"contacto@coparmex.com"});
+//                i.putExtra(Intent.EXTRA_SUBJECT, "Duda de conferencia \"" + descriptionItem.getTitle() +"\"");
+//                i.putExtra(Intent.EXTRA_TEXT, "A thousnad words");
+//                try {
+//                    startActivity(Intent.createChooser(i, "Send mail..."));
+//                    //  Toast.makeText(RegisterFragment.this.getActivity(), "OK!", Toast.LENGTH_SHORT).show();
+//                } catch (android.content.ActivityNotFoundException ex) {
+//                    Toast.makeText(DescriptionFragment.this.getActivity(), "No hay clientes de correo instalados", Toast.LENGTH_SHORT).show();
+//                }
+//            }
+//        });
 
         return rootView;
     }
