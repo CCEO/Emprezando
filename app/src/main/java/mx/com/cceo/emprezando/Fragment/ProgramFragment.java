@@ -57,17 +57,20 @@ public class ProgramFragment extends Fragment implements ProgramClickListener{
         ConferenceItem vidal = new ConferenceItem("Vidal Cantú","Kenio Films y Veramiko", "13:30 - 14:10", R.drawable.vidal);
         ConferenceItem norma = new ConferenceItem("Norma Romero","Las Patronas", "16:40 - 17:10", R.drawable.norma);
         ConferenceItem jose = new ConferenceItem("José Luis Garza", "Interjet", "00:00 - 00:00", R.drawable.big_jose);
+        ConferenceItem armando = new ConferenceItem("Armando Guadiana", "Minera Coapas","", R.drawable.armando);
+        ConferenceItem angel  = new ConferenceItem("José Gonzáles Serna", "Textiles Universales","",R.drawable.angel);
 
         dataSet.add(saul);
         dataSet.add(jorge);
         dataSet.add(juan);
         dataSet.add(francisco);
-        dataSet.add(sergio);
         dataSet.add(guadalupe);
         dataSet.add(arturo);
         dataSet.add(vidal);
         dataSet.add(norma);
         dataSet.add(jose);
+        dataSet.add(armando);
+        dataSet.add(angel);
 
         mAdapter = new ProgramAdapter(dataSet, this,getActivity());
         mRecyclerView.setAdapter(mAdapter);

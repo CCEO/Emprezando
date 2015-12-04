@@ -42,6 +42,7 @@ import mx.com.cceo.emprezando.Fragment.InformationFragment;
 import mx.com.cceo.emprezando.Fragment.MemoriesFragment;
 import mx.com.cceo.emprezando.Fragment.ProgramFragment;
 import mx.com.cceo.emprezando.Fragment.RegisterFragment;
+import mx.com.cceo.emprezando.Fragment.ScheduleFragment;
 import mx.com.cceo.emprezando.Fragment.VenueFragment;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FloatingActionButton fabRegister;
 
 
-    private static final int NUM_PAGES = 5;
+    private static final int NUM_PAGES = 6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,7 +128,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onPageSelected(int position) {
 
-                if (position == 4) {
+                if (position == 5) {
                     fabRegister.setVisibility(View.VISIBLE);
                     fabRegister.animate().alpha(1.0f).translationY(-fabRegister.getHeight() * 0.2f);
                 } else {
@@ -161,7 +162,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         RelativeLayout drawerInformation = (RelativeLayout) findViewById(R.id.drawer_information);
         drawerInformation.setOnClickListener(this);
 
-        RelativeLayout drawerProgram = (RelativeLayout) findViewById(R.id.drawer_program);
+        RelativeLayout drawerProgram = (RelativeLayout) findViewById(R.id.drawer_schedule);
         drawerProgram.setOnClickListener(this);
 
         RelativeLayout drawerMemories = (RelativeLayout) findViewById(R.id.drawer_memories);
@@ -172,6 +173,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         RelativeLayout drawerRegister = (RelativeLayout) findViewById(R.id.drawer_register);
         drawerRegister.setOnClickListener(this);
+
+        RelativeLayout drawer_schedule = (RelativeLayout) findViewById(R.id.drawer_speakers);
+        drawer_schedule.setOnClickListener(this);
     }
 
     @Override
@@ -212,21 +216,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 mPager.setCurrentItem(0);
                 break;
-            case R.id.drawer_program:
+            case R.id.drawer_schedule:
 
                 mPager.setCurrentItem(1);
                 break;
-            case R.id.drawer_memories:
+            case R.id.drawer_speakers:
 
                 mPager.setCurrentItem(2);
                 break;
-            case R.id.drawer_venue:
+            case R.id.drawer_memories:
 
                 mPager.setCurrentItem(3);
                 break;
-            case R.id.drawer_register:
+            case R.id.drawer_venue:
 
                 mPager.setCurrentItem(4);
+                break;
+            case R.id.drawer_register:
+
+                mPager.setCurrentItem(5);
                 break;
         }
     }
@@ -249,11 +257,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return new InformationFragment();
                 case 1:
                     //           ivBackGround.setTranslationX(pageWidth/5 * (1));
-                    return new ProgramFragment();
+                    return new ScheduleFragment();
                 case 2:
+                    //           ivBackGround.setTranslationX(pageWidth/5 * (1));
+                    return new ProgramFragment();
+                case 3:
                     //         ivBackGround.setTranslationX(pageWidth/5 * (2));
                     return new MemoriesFragment();
-                case 3:
+                case 4:
                     //       ivBackGround.setTranslationX(pageWidth/5 * (3));
                     return new VenueFragment();
                 default:
@@ -273,12 +284,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 case 0:
                     return "Información";
                 case 1:
-                    return "Conferencistas";
+                    return "Programa";
                 case 2:
-                    return "Memorias";
+                    return "Conferencistas";
                 case 3:
-                    return "Sede";
+                    return "Memorias";
                 case 4:
+                    return "Sede";
+                case 5:
                     return "Registro";
             }
             return "";

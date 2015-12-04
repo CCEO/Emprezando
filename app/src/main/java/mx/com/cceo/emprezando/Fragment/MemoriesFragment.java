@@ -1,6 +1,7 @@
 package mx.com.cceo.emprezando.Fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -20,12 +21,15 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import mx.com.cceo.emprezando.DescriptionActivity;
+import mx.com.cceo.emprezando.ImageShowcaseActivity;
+import mx.com.cceo.emprezando.Linker.ProgramClickListener;
 import mx.com.cceo.emprezando.R;
 
 /**
  * Created by Hugo on 10/5/2015.
  */
-public class MemoriesFragment extends Fragment {
+public class MemoriesFragment extends Fragment implements ProgramClickListener{
 
     private RelativeLayout banner_2013;
     private RelativeLayout banner_2014;
@@ -46,7 +50,7 @@ public class MemoriesFragment extends Fragment {
                 R.layout.fragment_memories, container, false);
 
         GridView gridview = (GridView) rootView.findViewById(R.id.fragment_memories_gridview);
-        gridview.setAdapter(new ImageAdapter(this.getActivity()));
+        gridview.setAdapter(new ImageAdapter(this.getActivity(), this));
 
 
 
@@ -75,12 +79,22 @@ public class MemoriesFragment extends Fragment {
         return rootView;
     }
 
+    @Override
+    public void onCardClick(View v, int position) {
+        Intent mainIntent = new Intent(MemoriesFragment.this.getActivity(), ImageShowcaseActivity.class);
+        mainIntent.putExtra("position", position);
+        startActivity(mainIntent);
+        getActivity().overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+    }
+
 
     public class ImageAdapter extends BaseAdapter {
         private Context mContext;
+        private ProgramClickListener clickListener;
 
-        public ImageAdapter(Context c) {
+        public ImageAdapter(Context c, ProgramClickListener listener) {
             mContext = c;
+            clickListener = listener;
 
         }
 
@@ -104,15 +118,8 @@ public class MemoriesFragment extends Fragment {
         }
 
         // create a new ImageView for each item referenced by the Adapter
-        public View getView(int position, View convertView, ViewGroup parent) {
-//            CardView card = new CardView(mContext);
-//            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-//                    LinearLayout.LayoutParams.MATCH_PARENT,
-//                    LinearLayout.LayoutParams.WRAP_CONTENT
-//            );
-//            int margin = dpToPixels(8);
-//            params.setMargins(margin, margin, margin, margin);
-//            card.setLayoutParams(params);
+        public View getView(final int position, View convertView, ViewGroup parent) {
+
 
             ImageView imageView;
             if (convertView == null) {
@@ -126,7 +133,14 @@ public class MemoriesFragment extends Fragment {
             }
 
             imageView.setImageResource(mThumbIds[position]);
-//            card.addView(imageView);
+
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                   clickListener.onCardClick(v,position);
+                }
+            });
+
             return imageView;
         }
 
@@ -139,9 +153,10 @@ public class MemoriesFragment extends Fragment {
                 R.drawable.memories_2012_5, R.drawable.memories_2012_6,
                 R.drawable.memories_2012_7, R.drawable.memories_2012_8,
                 R.drawable.memories_2012_9, R.drawable.memories_2012_10,
-                R.drawable.memories_2012_11, R.drawable.memories_2012_12,
+                R.drawable.a11, R.drawable.memories_2012_12,
                 R.drawable.memories_2012_13, R.drawable.memories_2012_14,
                 R.drawable.memories_2012_15, R.drawable.memories_2012_16,
+                R.drawable.a17, R.drawable.a18,
                 //2013
                 R.drawable.header_2013,
                 R.drawable.memories_2013_1, R.drawable.memories_2013_2,
@@ -158,7 +173,7 @@ public class MemoriesFragment extends Fragment {
                 R.drawable.memories_2014_5, R.drawable.memories_2014_6,
                 R.drawable.memories_2014_7, R.drawable.memories_2014_8,
                 R.drawable.memories_2014_9, R.drawable.memories_2014_10,
-                R.drawable.memories_2014_11,
+                R.drawable.memories_2014_11
 
         };
     }

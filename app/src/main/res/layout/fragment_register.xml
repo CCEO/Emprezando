@@ -67,7 +67,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="El registro es muy simple solo da click en el botón que aparece aquí debajo.\n
-Llena los campos que se solicitan (todos los campos son requeridos)
+\nLlena los campos que se solicitan (todos los campos son requeridos)
 En el momento que esté listo tu registro, aparecerá una imagen con una leyenda de tu registro terminado.\n\nTe deberá llegar un correo electrónico con la confirmación de tu registro y los pasos para efectuar el pago y el número de cuenta al cual deberás hacer el pago. \n\nSi llegaras a tener cualquier otra duda envía un correo a contacto@emprezando.com\n
 Envia tu ficha a pago2015@emprezando.com"
                         android:id="@+id/textView2" />

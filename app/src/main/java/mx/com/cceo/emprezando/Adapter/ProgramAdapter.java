@@ -52,7 +52,7 @@ public class ProgramAdapter extends  RecyclerView.Adapter<ProgramAdapter.ViewHol
 
         holder.textTitle.setText(dataSet.get(position).getTitle());
         holder.textSpeaker.setText(dataSet.get(position).getSpeaker());
-        holder.textTime.setText(dataSet.get(position).getTime());
+        holder.textTime.setText("");
         holder.ivProfile.setImageResource(dataSet.get(position).getPic());
 
 

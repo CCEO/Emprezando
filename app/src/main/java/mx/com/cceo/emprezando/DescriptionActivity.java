@@ -110,18 +110,39 @@ public class DescriptionActivity extends AppCompatActivity {
         DescriptionItem jose = new DescriptionItem("José Luis Garza", "Interjet","El líder que transformo la industria de la aviación en México.\n\nCiudadano Mexicano. Maestría en Management Science (Msc), The London School of Economics 1975-1976. Licenciatura en Ciencias Políticas, Universidad Iberoamericana México 1966-1971. Recibió importantes distinciones académicas y ha cursado una amplia variedad de cursos, seminarios sobre temas relacionados con Alta Dirección.\n\n" +
                 "El Sr. Garza ha ocupado puestos de alta dirección en instituciones financieras mexicanas, empresas nacionales y extranjeras y en instituciones del Gobierno Federal: Banamex, Multivalores, Teleinformática de México, Caterpillar-Turbinas Solar, Grupo Gutsa, Infonavit y Secretaría de la Presidencia. Con más de 35 años de experiencia profesional.\n\n" +
                 "El Sr. Garza ha sido el responsable directo de Interjet, aerolínea comercial mexicana que inauguró el nuevo concepto de Aerolíneas Eficientes en México.", R.drawable.jose_good);
+        DescriptionItem armando = new DescriptionItem("Armando Guadiana", "Mineria Coapas","El minero que revolucionó la industria metalúrgica generando mas de 2000 empleos.\n\nExperiencia profesional\n\n" +
+                "Diseño y Cálculo Estructural.\n" +
+                "Evaluación de Proyectos de Inversión.\n" +
+                "Contratista de obras minero-metalúrgicas durante más de 25 años y Promotor de exploraciones en reservas mineras para el establecimiento de medianas y pequeñas Empresas mineras.\n" +
+                "Promotor y Accionista mayoritario de diversas Empresas Mineras, que han generado más de\n" +
+                "2,000 empleos directos\n\nEmpresas:\n" +
+                "\n" +
+                "Compañía Minera Caopas, S.A. de C.V.\n" +
+                "Materiales Industrializados, S.A. de C.V.\n" +
+                "Materiales y Triturados El Pilar, S.A. de C.V.\n" +
+                "Compañía Minera Ameca, S.A. de C.V.\n" +
+                "Compañía Minera Huajicari, S.A. de C.V.", R.drawable.armando);
+        DescriptionItem angfel = new DescriptionItem("José Ángel Gonzáles","Textiles Universales","El líder empresarial que ha dejado huella en la historia de Coparmex Aguascalientes.\n\n" +
+                "Egresado de la UAA de la carrera de MVZ, con estudios de Postgrado en Administración de Empresas Agropecuarias.\n" +
+                "\n" +
+                "Posteriormente se desempeñó como Gerente de Servicio a Socios en GILSA, Pasteurizadora Sn Marcos.\n" +
+                "\n" +
+                "A partir de 1986 se convierte en Empresario, Como emprendedor y creador de diferente empresa del ramo inmobiliario y textil, así como inversionista en el sector financiero, en estas ramas económicas continua activo hasta hoy en día.\n" +
+                "\n" +
+                "Como integrante de diferentes cámaras empresariales, fue Vicepresidente de la Coparmex así como Presidente de la Comisión de Seguridad Pública de la misma en los años más difíciles 2007 2008 y 2009, además de Presidente de la Comisión de Desarrollo Económico, en estos años también fue integrante del Consejo Ciudadano de Seguridad Pública como Secretario.\n\nEn el 2010 se convirtió en Diputado Local, posteriormente diputado federal por el Edo de Aguascalientes, su trabajo lo desarrollo desde las Comisiones de Competitividad, Economía y Relaciones Exteriores.",R.drawable.angel);
 
-        ArrayList<DescriptionItem> list = new ArrayList<>();
+        final ArrayList<DescriptionItem> list = new ArrayList<>();
         list.add(saul);
         list.add(jorge);
         list.add(juan);
         list.add(francisco);
-        list.add(sergio);
         list.add(guadalupe);
         list.add(arturo);
         list.add(vidal);
         list.add(norma);
         list.add(jose);
+        list.add(armando);
+        list.add(angfel);
 
         //looks up ViewPager and sets its adapter
         mPager = (ViewPager) findViewById(R.id.main_pager);
@@ -139,8 +160,8 @@ public class DescriptionActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setType("message/rfc822");
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"contacto@coparmex.com"});
-                i.putExtra(Intent.EXTRA_SUBJECT, "Duda de conferencia \"" + "" +"\"");
+                i.putExtra(Intent.EXTRA_EMAIL, new String[]{"contacto@emprezado.com"});
+                i.putExtra(Intent.EXTRA_SUBJECT, "Duda de conferencia " + list.get(mPager.getCurrentItem()).getTitle());
                 i.putExtra(Intent.EXTRA_TEXT, "");
                 try {
                     startActivity(Intent.createChooser(i, "Send mail..."));
