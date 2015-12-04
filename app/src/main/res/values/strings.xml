@@ -4,4 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="title_activity_description">DescriptionActivity</string>
+    <string name="xml_test_data">Hola!</string>
+    <string name="title_activity_image_showcase">ImageShowcaseActivity</string>
 </resources>

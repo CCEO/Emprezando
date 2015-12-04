@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEDDE3"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="220dip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/venue" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/venue_top"
+                android:layout_width="match_parent"
+                android:layout_height="174dp" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/item_venue_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/venue_top"
+                android:layout_marginBottom="8dip"
+                android:layout_marginLeft="16dip"
+                android:layout_marginRight="16dip"
+
+                android:layout_marginTop="174dp"
+
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:paddingBottom="8dip">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="Este año el Teatro Morelos será quien reciba a los emprendedores y empresarios que van a cambiar a México, que mejor sede que la que reunió hace un poco más de 100 años a mexicanos que también cambiaron México."
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/buttonVenue"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:layout_width="16dip"
+                            android:layout_height="16dip"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="16dip"
+                            android:src="@drawable/marker_logo"
+                            android:alpha="0.6"/>
+
+                        <TextView
+
+                            android:textColor="#6f8dc5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="40dip"
+                            android:text="Ubicación de la sede"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:id="@+id/venue_downp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@id/item_venue_card" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DEDDE3">
+
+
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="8dip"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/item_program_card">
+                <RelativeLayout
+                    android:paddingBottom="8dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:alpha="0.8"
+                        android:layout_marginTop="9dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:src="@drawable/steps_icon"
+                        android:id="@+id/imageView2" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_marginStart="8dip"
+                        android:layout_toRightOf="@+id/imageView2"
+                        android:layout_above="@+id/imageView3"
+                        android:textColor="#000000"
+                        android:text="Pasos Para el Registro"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_below="@+id/imageView2"
+                        android:layout_marginTop="-10dip"
+                        android:layout_width="310dip"
+                        android:layout_marginBottom="0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/page_break_rigth"
+                        android:id="@+id/imageView3" />
+
+                    <TextView
+                        android:alpha="0.8"
+                        android:textSize="15sp"
+                        android:layout_below="@id/imageView3"
+                        android:paddingStart="16dip"
+                        android:paddingEnd="16dip"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="El registro es muy simple solo da click en el botón que aparece aquí debajo.\n
+\nLlena los campos que se solicitan (todos los campos son requeridos)
+En el momento que esté listo tu registro, aparecerá una imagen con una leyenda de tu registro terminado.\n\nTe deberá llegar un correo electrónico con la confirmación de tu registro y los pasos para efectuar el pago y el número de cuenta al cual deberás hacer el pago. \n\nSi llegaras a tener cualquier otra duda envía un correo a contacto@emprezando.com\n
+Envia tu ficha a pago2015@emprezando.com"
+                        android:id="@+id/textView2" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="16dip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/item_program_card2">
+                <RelativeLayout
+                    android:paddingBottom="8dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:alpha="0.8"
+                        android:layout_marginTop="9dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:src="@drawable/price_icon"
+                        android:id="@+id/imageView101" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_marginStart="8dip"
+                        android:layout_toRightOf="@+id/imageView101"
+                        android:layout_above="@+id/imageView102"
+                        android:textColor="#000000"
+                        android:text="Costo"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_below="@+id/imageView101"
+                        android:layout_marginTop="-10dip"
+                        android:layout_width="310dip"
+                        android:layout_marginBottom="0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/page_break_rigth"
+                        android:id="@+id/imageView102" />
+
+                    <TextView
+                        android:alpha="0.8"
+                        android:textSize="15sp"
+                        android:layout_below="@id/imageView102"
+                        android:paddingStart="16dip"
+                        android:paddingEnd="16dip"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="- Si realizas tu pago del 1 al 25 de Noviembre el costo de tu inversión e de $450 pesos por persona.\n\n
+- Si realizas tu pago el día del evento (26 de Noviembre) el costo es de $500 Pesos por persona. \n\n*Sujeto a disponibilidad de espacios."
+                        android:id="@+id/textView103" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="16dip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?selectableItemBackground"
+                android:id="@+id/item_program_card3">
+                <RelativeLayout
+                    android:paddingBottom="8dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:alpha="0.8"
+                        android:layout_marginTop="9dip"
+                        android:layout_marginLeft="16dip"
+                        android:layout_width="32dip"
+                        android:layout_height="32dip"
+                        android:src="@drawable/include_icon"
+                        android:id="@+id/imageView103" />
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_marginStart="8dip"
+                        android:layout_toRightOf="@+id/imageView103"
+                        android:layout_above="@+id/imageView104"
+                        android:textColor="#000000"
+                        android:text="¿Que Incluye?"
+                        android:textSize="18sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_below="@+id/imageView103"
+                        android:layout_marginTop="-10dip"
+                        android:layout_width="310dip"
+                        android:layout_marginBottom="0dip"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/page_break_rigth"
+                        android:id="@+id/imageView104" />
+
+                    <TextView
+                        android:alpha="0.8"
+                        android:layout_below="@id/imageView104"
+                        android:paddingStart="16dip"
+                        android:paddingEnd="16dip"
+                        android:textSize="15sp"
+                        android:gravity="left"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="
+- Carnet.\n\n
+- Material de trabajo.\n\n
+- Conferencias de empresarios destacados de todo México.\n\n
+- 2 Talleres.\n\n
+- Actividades de Networking y negocios.\n\n
+- Coffee break\n\n
+- Comida."
+                        android:id="@+id/textView105" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView >
+
+</RelativeLayout>
